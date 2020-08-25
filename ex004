@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int par, np=0, imp, qtd=0;
+	int vet[6], i;
+	float aux=0;
+
+	printf("Digite 6 numeros inteiros: \n");
+
+	for(i=0; i<6; i++){
+		scanf("%i", &vet[i]);
+		aux = vet[i]%2;
+
+		if(aux == 0){
+			printf("O numero %i e par. \n", vet[i]);
+			np = np+vet[i];
+		} else if (aux != 0){
+			printf("O numero %i e impar \n", vet[i]);
+			qtd++;
+		}
+	}
+printf("\n A soma dos numeros pares e: %i", np);
+printf("\n A quantidade de numeros impares e: %i", qtd);
+
+return 0;
+}
