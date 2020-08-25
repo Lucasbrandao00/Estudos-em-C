@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+    int c, op;
+    float soma=0;
+    for(c=1;c<=10;c++);
+    {
+        printf("Sejam bem vindos ao Chapa Burguer !!!!!!!\n");
+        printf("_______________\n");
+        printf("Informe o numero da  sua mesa entre 1 e 10:\n");
+        scanf("%d",&c);
+
+        while(c<=0 || c>10){
+
+            printf("Digite um valor entre 1 e 10!\n");
+            scanf("%i",&c);
+
+        }
+
+
+       do{
+            system("cls");
+            printf("                        <<<Segue abaixo o cardapio>>>\n");
+            printf("                        +-------------------------------+\n");
+            printf("                        |100 -> Cachorro quente - 6.50  |\n");
+            printf("                        |101 -> Hamburguer -      6.00  |\n");
+            printf("                        |102 -> Cheeseburguer -   7.00  |\n");
+            printf("                        |103 -> refrigerante -    5.00  |\n");
+            printf("                        +-------------------------------+\n");
+            printf("Digite o codigo para escolher o que voce ira comprar entre opcoes de lanches e bebidas:\n");
+            printf ("                       DIGITE 5 PARA FECHAR SEU PEDIDO!\n");
+            printf("---------------------------------------------------------------------------------------\n");
+            scanf("%i",&op);
+
+            switch(op){
+                            case 100:
+                                printf("Cachorro quente adicionado ao carrinho!\n");
+                                getchar();
+                                system("cls");
+                                soma=soma + 6.50;
+                            break;
+
+                            case 101:
+                                printf("Hamburguer adicionado ao carrinho!\n");
+                                getchar();
+                                system("cls");
+                                soma=soma + 6.00;
+                            break;
+
+                            case 102:
+                                printf("Cheeseburguer adicionado ao carrinho!\n");
+                                getchar();
+                                system("cls");
+                                soma=soma + 7.00;
+                            break;
+
+                            case 103:
+                                printf("Refrigerante adicionado ao carrinho!\n");
+                                getchar();
+                                system("cls");
+                                soma=soma + 5.00;
+                            break;
+
+            }
+
+       }while( op !=5);
+
+            printf("O valor de sua conta e: %.2f", soma);
+            soma=0;
+
+    }
+
+    return 0;
+}
