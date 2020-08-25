@@ -1,0 +1,26 @@
+int main(){
+int i, c, aux, n[5];
+
+     for( i=0; i<5; i++ ){
+          printf("Digite qualquer numero: \n");
+          scanf("%i",&n[i]);
+          }
+
+          for( i=0; i<5; i++ ){
+            for( c=i+1; c<5; c++ ){
+                if( n[i] > n[c] ){
+                    aux = n[i];
+                    n[i] = n[c];
+                    n[c] = aux;
+                    }
+                }
+           }
+           printf("-------------------\n");
+           printf("Ordem crescente:\n ");
+
+           for(i=0;i<5;i++){
+                printf("%i\n",n[i]);
+           }
+return 0;
+}
+
