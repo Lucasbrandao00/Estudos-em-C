@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<math.h>
+#include <stdlib.h>
+
+int main(){
+
+	float id, n1, n2, n3, m, maa;
+	char op;
+
+	printf("Por favor, digite o numero de identificacao: ");
+	scanf("%f", &id);
+	system("cls");
+
+	printf("Digite a primeira nota: \n");
+	scanf("%f", &n1);
+
+	printf("Digite a  segunda nota:\n ");
+	scanf("%f", &n2);
+
+	printf("Digite a terceeira nota:\n ");
+	scanf("%f", &n3);
+	system("cls");
+
+	m= (n1+n2+n3)/3;
+	maa = ((n1+n2 * 2) + (n3*3) + m)/7;
+
+    printf("\nO aluno %2.f tirou as seguintes notas: Nota 1->%.2f, Nota 1->%.2f, Nota 3->%.2f\n", id, n1, n2, n3);
+	printf("\nA media desse aluno foi igual a: %.2f\n\nE a media de aproveitamento foi igual a: %.2f\n", m, maa);
+    printf("\nCom base na sua media digite o numero correspondente a sua nota:\n");
+    printf("                        +------------------+\n");
+    printf("                        |1 -> 9,0          |\n");
+    printf("                        |2 -> 7.5 < 9.0    |\n");
+    printf("                        |3 -> 6.0 < 7.5    |\n");
+    printf("                        |4 -> 4.0 < 6.0    |\n");
+    printf("                        |5 -> < 4.0        |\n") ;
+    printf("                        +------------------+\n");
+    scanf("%d", &op);
+    printf("---------------------------------------------------------------------------------------\n");
+
+
+	switch(op){
+        case 1:
+            printf("Voce foi aprovado, Parabens!!\n");
+            break;
+
+        case 2:
+            printf("Voce foi aprovado, Parabens!!\n");
+            break;
+
+        case 3:
+            printf("Voce foi aprovado, Parabens !!\n");
+            break;
+
+        case 4:
+            printf("Voce foi reprovado!!!!\n");
+            break;
+
+        case 5:
+            printf("Voce foi reprovado!!!!");
+            break;
+
+        default:
+            printf("FIM");
+
+	}
