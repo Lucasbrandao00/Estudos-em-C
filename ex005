@@ -1,0 +1,22 @@
+#include<stdio.h>
+	int main (){
+		int n, vet[10], i=0, cont=0;
+			do{
+				printf("Digite um numero: ");
+				scanf("%d", &vet[i]);
+				i++;
+			}while(i<10);
+		printf("Digite o numero que deseja procurar: ");
+		scanf("%d", &n);
+		for(i=0;i<10;i++){
+			if(n==vet[i]){
+				printf("O numero %d esta na posicao %d",n,i);
+				cont++;
+			}
+		}
+		if(cont==0){
+			printf("O numero digitado nao esta em nenhum vetor!");
+		}
+		
+	return 0;
+	}
